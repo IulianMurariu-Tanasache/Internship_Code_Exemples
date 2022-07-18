@@ -3,6 +3,11 @@ package Examples;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Optional;
+import java.util.function.BiConsumer;
+import java.util.function.BiFunction;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 public class FunctionalProgrammingExamples {
@@ -18,6 +23,13 @@ public class FunctionalProgrammingExamples {
 	}
 
 	public static void main(String[] args) {
+
+		// Functional interfaces
+		Function<Integer, Integer> incrementByOne = number -> number + 1;
+		BiFunction<Integer, Integer, Integer> multiplyNumbers = (n1, n2) -> n1 * n2;
+		Consumer<String> greet = (name) -> System.out.println("Hello " + name + "!");
+		BiConsumer<String, String> greetFullName = (firstName, lastName) -> System.out.println("Hello " + firstName + lastName + "!");
+		Supplier<String> getConnectionUrl = () -> "jdbc://localhost:5443/users";
 
 		ArrayList<Integer> numberList = new ArrayList<>(Arrays.asList(1,3,2,5,6,2));
 		System.out.println("List of number:" + numberList);
