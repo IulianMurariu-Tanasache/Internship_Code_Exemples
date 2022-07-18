@@ -1,33 +1,4 @@
-package Examples;
-
-interface IFactory<T> {
-	T create();
-}
-
-interface IProducer<T> {
-	T produce();
-}
-
-interface IConfigurator<T> {
-	void configure(T t);
-}
-
-class MutableInt {
-	private int x;
-
-	public MutableInt(int x) {
-		this.x = x;
-	}
-
-	public int getX() {
-		return x;
-	}
-
-	public void setX(int x) {
-		this.x = x;
-	}
-}
-
+package Examples.higher_order_function;
 
 public class HigherOrderFunction {
 	public static <T> IFactory<T> createFactory(IProducer<T> producer, IConfigurator<T> configurator) {
