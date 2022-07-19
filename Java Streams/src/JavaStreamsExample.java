@@ -1,8 +1,5 @@
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 public class JavaStreamsExample {
