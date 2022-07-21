@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assumptions.assumeTrue;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.Test;
@@ -17,6 +18,8 @@ import org.junit.jupiter.params.provider.ArgumentsProvider;
 import org.junit.jupiter.params.provider.ArgumentsSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
+
+// unit test vs integration test -> REST controller and calling other REST controllers
 
 class NumbersProvider implements ArgumentsProvider {
 
@@ -42,7 +45,6 @@ public class CalculatorTest {
     }
 
     @Test
-    //@Disabled("why not")
     @DisplayName("Test addition 1 + 2")
     void testAddition() {
         assumeTrue(calculator != null);
@@ -50,6 +52,7 @@ public class CalculatorTest {
     }
 
     @Test
+    @Disabled("Bad method")
     void testBadSubstract() {
         assumeTrue(calculator != null);
         assertEquals(0, calculator.badSubstract(1, 1));
