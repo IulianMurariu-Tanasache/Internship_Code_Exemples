@@ -1,18 +1,39 @@
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
+
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestFactory;
+import org.junit.jupiter.api.extension.ExtensionContext;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.ArgumentsProvider;
+import org.junit.jupiter.params.provider.ArgumentsSource;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assumptions.*;
+class NumbersProvider implements ArgumentsProvider {
 
-public class CalculatorTestClass {
+    @Override
+    public Stream<? extends Arguments> provideArguments(ExtensionContext extensionContext)
+        throws Exception {
+        return IntStream.range(0, 10).mapToObj(Arguments::of);
+    }
+}
+
+public class CalculatorTest {
 
     private Calculator calculator = null;
+
+    static IntStream numbersProvider() {
+        return IntStream.range(0, 9);
+    }
 
     // @BeforeAll -> static
     @BeforeEach
@@ -21,6 +42,7 @@ public class CalculatorTestClass {
     }
 
     @Test
+    //@Disabled("why not")
     @DisplayName("Test addition 1 + 2")
     void testAddition() {
         assumeTrue(calculator != null);
@@ -67,4 +89,21 @@ public class CalculatorTestClass {
             );
     }
 
+    @ParameterizedTest
+    @ValueSource(ints = {0,1,2,3,4,5,6,7,8,9})
+    void testSquaringNumber(int nr) {
+        assertEquals(nr * nr, calculator.multiply(nr, nr));
+    }
+
+    @ParameterizedTest
+    @MethodSource("numbersProvider")
+    void testAdditionWith0(int nr) {
+        assertEquals(nr, calculator.add(0, nr));
+    }
+
+    @ParameterizedTest
+    @ArgumentsSource(NumbersProvider.class)
+    void testDivisionBy1(int nr) {
+        assertEquals(nr, calculator.divide(nr, 1));
+    }
 }
