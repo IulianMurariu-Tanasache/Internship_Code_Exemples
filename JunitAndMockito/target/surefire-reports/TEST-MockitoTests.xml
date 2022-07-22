@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="CalculatorTest" time="0.503" tests="42" errors="0" skipped="1" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="MockitoTests" time="2.63" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -62,48 +62,8 @@
     <property name="java.class.version" value="55.0"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase name="testBadSubstract" classname="CalculatorTest" time="0">
-    <skipped message="Bad method"/>
-  </testcase>
-  <testcase name="testDivisionBy1{int}[1]" classname="CalculatorTest" time="0.055"/>
-  <testcase name="testDivisionBy1{int}[2]" classname="CalculatorTest" time="0.006"/>
-  <testcase name="testDivisionBy1{int}[3]" classname="CalculatorTest" time="0"/>
-  <testcase name="testDivisionBy1{int}[4]" classname="CalculatorTest" time="0.095"/>
-  <testcase name="testDivisionBy1{int}[5]" classname="CalculatorTest" time="0"/>
-  <testcase name="testDivisionBy1{int}[6]" classname="CalculatorTest" time="0.006"/>
-  <testcase name="testDivisionBy1{int}[7]" classname="CalculatorTest" time="0.001"/>
-  <testcase name="testDivisionBy1{int}[8]" classname="CalculatorTest" time="0.001"/>
-  <testcase name="testDivisionBy1{int}[9]" classname="CalculatorTest" time="0.001"/>
-  <testcase name="testDivisionBy1{int}[10]" classname="CalculatorTest" time="0.001"/>
-  <testcase name="testAdditionWith0{int}[1]" classname="CalculatorTest" time="0.001"/>
-  <testcase name="testAdditionWith0{int}[2]" classname="CalculatorTest" time="0.001"/>
-  <testcase name="testAdditionWith0{int}[3]" classname="CalculatorTest" time="0.001"/>
-  <testcase name="testAdditionWith0{int}[4]" classname="CalculatorTest" time="0.001"/>
-  <testcase name="testAdditionWith0{int}[5]" classname="CalculatorTest" time="0.001"/>
-  <testcase name="testAdditionWith0{int}[6]" classname="CalculatorTest" time="0.001"/>
-  <testcase name="testAdditionWith0{int}[7]" classname="CalculatorTest" time="0.001"/>
-  <testcase name="testAdditionWith0{int}[8]" classname="CalculatorTest" time="0.007"/>
-  <testcase name="testAdditionWith0{int}[9]" classname="CalculatorTest" time="0.001"/>
-  <testcase name="groupTestForMultiplicationWith1" classname="CalculatorTest" time="0.009"/>
-  <testcase name="testDivisionBy0Exception" classname="CalculatorTest" time="0.006"/>
-  <testcase name="testMultiplicationBy0[1]" classname="CalculatorTest" time="0.002"/>
-  <testcase name="testMultiplicationBy0[2]" classname="CalculatorTest" time="0.001"/>
-  <testcase name="testMultiplicationBy0[3]" classname="CalculatorTest" time="0"/>
-  <testcase name="testMultiplicationBy0[4]" classname="CalculatorTest" time="0"/>
-  <testcase name="testMultiplicationBy0[5]" classname="CalculatorTest" time="0"/>
-  <testcase name="testMultiplicationBy0[6]" classname="CalculatorTest" time="0"/>
-  <testcase name="testMultiplicationBy0[7]" classname="CalculatorTest" time="0.001"/>
-  <testcase name="testMultiplicationBy0[8]" classname="CalculatorTest" time="0"/>
-  <testcase name="testMultiplicationBy0[9]" classname="CalculatorTest" time="0"/>
-  <testcase name="testAddition" classname="CalculatorTest" time="0.001"/>
-  <testcase name="testSquaringNumber{int}[1]" classname="CalculatorTest" time="0.001"/>
-  <testcase name="testSquaringNumber{int}[2]" classname="CalculatorTest" time="0"/>
-  <testcase name="testSquaringNumber{int}[3]" classname="CalculatorTest" time="0.001"/>
-  <testcase name="testSquaringNumber{int}[4]" classname="CalculatorTest" time="0"/>
-  <testcase name="testSquaringNumber{int}[5]" classname="CalculatorTest" time="0.001"/>
-  <testcase name="testSquaringNumber{int}[6]" classname="CalculatorTest" time="0.001"/>
-  <testcase name="testSquaringNumber{int}[7]" classname="CalculatorTest" time="0"/>
-  <testcase name="testSquaringNumber{int}[8]" classname="CalculatorTest" time="0"/>
-  <testcase name="testSquaringNumber{int}[9]" classname="CalculatorTest" time="0.001"/>
-  <testcase name="testSquaringNumber{int}[10]" classname="CalculatorTest" time="0.001"/>
+  <testcase name="whenUseCaptorAnnotation_thenTheSam" classname="MockitoTests" time="2.5"/>
+  <testcase name="whenUseInjectMocksAnnotation_thenCorrect" classname="MockitoTests" time="0.031"/>
+  <testcase name="whenUseSpyAnnotation_thenSpyIsInjectedCorrectly" classname="MockitoTests" time="0.078"/>
+  <testcase name="whenUseMockAnnotation_thenMockIsInjected" classname="MockitoTests" time="0.009"/>
 </testsuite>

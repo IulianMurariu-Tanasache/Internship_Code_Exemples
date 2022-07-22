@@ -31,7 +31,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
-public class MockitoBasics {
+public class MockitoBasicsTests {
 
     @Mock
     private JobService jobService;
