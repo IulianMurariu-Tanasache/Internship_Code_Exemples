@@ -15,6 +15,7 @@
     <module>JavaStreams</module>
     <module>JunitAndMockito</module>
     <module>MavenExamples</module>
+    <module>JPAandHibernate</module>
   </modules>
 
   <properties>
