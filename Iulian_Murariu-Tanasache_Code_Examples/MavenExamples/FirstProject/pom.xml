@@ -4,7 +4,7 @@
                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
     
     <parent>
-        <artifactId>IulianMurariuTanasache-CodeExamples</artifactId>
+        <artifactId>MavenExamples</artifactId>
         <groupId>com.godaddy</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>

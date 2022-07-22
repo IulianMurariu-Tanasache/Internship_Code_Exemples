@@ -8,6 +8,7 @@
   <artifactId>IulianMurariuTanasache-CodeExamples</artifactId>
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+
   <modules>
     <module>JavaConcurrency</module>
     <module>JavaFunctional</module>
@@ -16,20 +17,19 @@
     <module>MavenExamples</module>
   </modules>
 
-  <!--  <properties>-->
-<!--    <maven.compiler.source>11</maven.compiler.source>-->
-<!--    <maven.compiler.target>11</maven.compiler.target>-->
-<!--  </properties>-->
+  <properties>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+  </properties>
 
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-engine</artifactId>
-        <version>5.9.0-RC1</version>
-        <scope>test</scope>
-      </dependency>
-  </dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.24</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
 
   <build>
     <plugins>
